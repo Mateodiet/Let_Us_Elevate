@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_130019) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_154157) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "challenges", force: :cascade do |t|
     t.string "description"
     t.string "title"
-    t.bigint "theme_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["theme_id"], name: "index_challenges_on_theme_id"
+    t.bigint "design_id"
+    t.index ["design_id"], name: "index_challenges_on_design_id"
   end
 
   create_table "designs", force: :cascade do |t|
@@ -30,14 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_130019) do
     t.string "notself"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "themes", force: :cascade do |t|
-    t.string "name"
-    t.bigint "design_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["design_id"], name: "index_themes_on_design_id"
   end
 
   create_table "user_challenges", force: :cascade do |t|
@@ -79,8 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_130019) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "challenges", "themes"
-  add_foreign_key "themes", "designs"
+  add_foreign_key "challenges", "designs"
   add_foreign_key "user_challenges", "challenges"
   add_foreign_key "user_challenges", "users"
   add_foreign_key "user_designs", "designs"
