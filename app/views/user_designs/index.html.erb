@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1>Mon Design</h1>
+  <% @userdesigns.each do |userdesign| %>
+
+ <%= image_tag "https://imagizer.imageshack.com/img924/8678/xdEd92.png", class:"image-design" %>
+
+    <div> Type <%= userdesign.design.name_type %></div>
+    <div> Strategy <%= userdesign.design.strategy %></div>
+    <div> Authority <%= userdesign.design.authority %></div>
+    <div> Not Self theme <%= userdesign.design.notself %></div>
+
+  <% end %>
+
+  <%= link_to "challenges", user_challenges_path %>
+</div>
