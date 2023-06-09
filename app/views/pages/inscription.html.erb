@@ -11,16 +11,13 @@
     pour le chevron qui est un link to ( regarder en favicon pour le mettre en image tag )
 
  %>
-   <div>
-      <h1 class="title">  Let Us Elevate </h1>
-      <div class="text-center">
-    </div>
+
 
     <div class="inscrit" >Inscription </div>
     <form>
       <div class="mb-3">
 
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" id="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
@@ -30,6 +27,8 @@
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
       <button type="submit" class="btn btn-primary">Inscription</button>
+       <div class="btn btn-primary">
+      <%= link_to api_path do%>
     </form>
 
   <div class="container d-flex flex-column">
