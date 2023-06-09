@@ -1,0 +1,58 @@
+<%# 1 div générale ( container )
+  1 div haut
+    le point d'intérrogation
+  1 div milieu
+    formulaire via bootstrap
+      div ( donner un nom a la div quand je veux toucher au h1 > nom de la div h1 en scss)
+        h1 logo
+        p slogan
+      div
+  1 div bas
+    pour le chevron qui est un link to ( regarder en favicon pour le mettre en image tag )
+
+ %>
+
+
+
+   <div>
+      <h1 class="title">  Let Us Elevate </h1>
+      <div class="text-center">
+    </div>
+
+    <div class="inscrit" >Inscription </div>
+    <form>
+      <div class="mb-3">
+
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Inscription</button>
+    </form>
+
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center min-vh-100 g-0">
+      <div class="col-12 col-md-8 col-lg-4 border-top border-3 border-primary">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="mb-4">
+              <h5>Forgot Password?</h5>
+              <p class="mb-2">Enter your registered email ID to reset the password
+              </p>
+            </div>
+
+
+  <hr class="my-4">
+  <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+  <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+
+
+    <%# ici chevron pour switcher sur ecran inscription #%>
+     <img class="48" height="48" src="https://img.icons8.com/color/48/chevron-right.png" alt="chevron-right"/>
+   <%# <div class="link-to">
+  <%# link_to , apiform_path #%>
