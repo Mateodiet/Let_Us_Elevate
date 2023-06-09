@@ -7,9 +7,11 @@ class UserChallengesController < ApplicationController
     @userchallenge = UserChallenge.find(params[:id])
   end
 
-  def update
+  def status
     @userchallenge = UserChallenge.find(params[:id])
-    @userchallenge.update
-    redirect_to userchallenge_path(@userchallenge)
+    if params[:status].present? && UserChallenge::STATUSES.include?(params[:status].to_sym)
+      @userchallenge.update(status: params[:status])
+    end
+    redirect_to user_challenge_path(@userchallenge), notice: "Votre challenge est #{@userchallenge.status} !"
   end
 end
