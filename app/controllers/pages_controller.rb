@@ -4,12 +4,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def information_1
-  end
-
-  def information_2
-  end
-
-  def information_3
+  def informations
   end
 end

@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  get "/challenges", to: "user_challenges#index"
-  get "/challenges/:id", to: "user_challenges#show", as: "challenge"
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  get "/information_1", to: "information_2"
-  get "/information_2", to: "information_3"
+  # Defines the root path route ("/")
+  get "informations", to: "pages#informations"
+  # root "articles#index"
+  resources :user_challenges, only: [:index, :show]
+  patch "user_challenges/:id", to: "user_challenges#status", as: :change_status_user_challenge
 end
