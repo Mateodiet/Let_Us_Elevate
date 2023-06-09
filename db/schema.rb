@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_133235) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_09_084219) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "challenges", force: :cascade do |t|
     t.string "description"
     t.string "title"
-    t.bigint "theme_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["theme_id"], name: "index_challenges_on_theme_id"
+    t.bigint "design_id"
+    t.index ["design_id"], name: "index_challenges_on_design_id"
   end
 
   create_table "designs", force: :cascade do |t|
-    t.string "type"
+    t.string "name_type"
     t.string "strategy"
     t.string "authority"
     t.string "notself"
@@ -32,18 +32,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_133235) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "themes", force: :cascade do |t|
-    t.string "name"
-    t.bigint "design_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["design_id"], name: "index_themes_on_design_id"
-  end
-
   create_table "user_challenges", force: :cascade do |t|
     t.bigint "challenge_id", null: false
     t.bigint "user_id", null: false
-    t.boolean "status"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["challenge_id"], name: "index_user_challenges_on_challenge_id"
@@ -69,17 +61,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_133235) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "birthdate"
-    t.integer "hourdate"
     t.string "city"
     t.string "country"
     t.string "username"
+    t.string "api_key"
+    t.string "date"
+    t.string "timezone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "challenges", "themes"
-  add_foreign_key "themes", "designs"
+  add_foreign_key "challenges", "designs"
   add_foreign_key "user_challenges", "challenges"
   add_foreign_key "user_challenges", "users"
   add_foreign_key "user_designs", "designs"

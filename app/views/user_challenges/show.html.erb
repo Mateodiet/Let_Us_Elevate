@@ -1,0 +1,25 @@
+
+<h1>Challenges</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><%= @userchallenge.challenge.title %></h3>
+<p><%= @userchallenge.challenge.description %></p>
+<p><%= @userchallenge.status %></p>
+  <% UserChallenge::STATUSES.each do |status| %>
+    <%= link_to status, change_status_user_challenge_path(@userchallenge, status: status), data: { turbo_method: :patch} %>
+  <% end %>

@@ -1,0 +1,6 @@
+
+<% @userchallenges.each do |challenge| %>
+
+<%= link_to challenge.challenge.title, user_challenge_path(challenge) %>
+
+<% end %>
