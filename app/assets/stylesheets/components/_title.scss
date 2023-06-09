@@ -5,16 +5,16 @@
 left: 50px;
 letter-spacing: 0;
 line-height: 32px;
-position: absolution;
 text-align: center;
 color: white;
-top: 205px;
+height: 205px;
 width: 252 px;
 }
 
-.h1 {
-  font-size: calc(1.375rem + 1.5vw);
-  text-align: center
-
-
-}
+h1{
+  position: relative;
+  left: 40%;
+  top: 177px;
+  margin-top: 18px;
+  margin-left: -113px;
+  }
