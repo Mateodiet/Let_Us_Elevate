@@ -1,7 +1,29 @@
-.information_1, .information_2{
-color: white
+// .information_1 {
+
+// }
+
+// .information_btn_1 {
+
+// }
+
+.information_btn_2 {
+  opacity: 0.5;
+  // &:hover {
+  //   opacity: 1;
+  // }
+}
+
+.information_btn_3 {
+  opacity: 0.5;
+  // &:hover {
+  //   opacity: 1;
+  // }
+}
+
+.information_2 {
+  display: none;
 }
 
 .information_3 {
-color: white;
+display: none;
 }
