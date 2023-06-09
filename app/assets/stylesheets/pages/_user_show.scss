@@ -1,0 +1,21 @@
+.container {
+  background-image: "background.png";
+  color: white;
+}
+
+.trans-back {
+  background-color: #000;
+  color: white;
+  opacity: .5;
+  border-radius: 15px;
+  width: auto;
+  height: auto;
+}
+
+.challenge-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  padding: 1%;
+}
