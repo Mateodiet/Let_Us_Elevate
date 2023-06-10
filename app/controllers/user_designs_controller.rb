@@ -1,5 +1,9 @@
 class UserDesignsController < ApplicationController
-  def index
-    @userdesigns = UserDesign.all
+
+
+  def show
+    @user_design = UserDesign.find(params[:id])
   end
+
+
 end

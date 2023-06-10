@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "informations", to: "pages#informations"
-  get "inscription", to: "pages#inscription"
 
   resources :user_challenges, only: [:index, :show]
   patch "user_challenges/:id", to: "user_challenges#status", as: :change_status_user_challenge
   resources :user_designs
 
   get "design", to: "designs#form", as: :form_design
+  post "design", to: "designs#scrap"
 end

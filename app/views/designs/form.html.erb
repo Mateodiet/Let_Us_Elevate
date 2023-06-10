@@ -1,7 +1,42 @@
-<%= simple_form_for @design do |f| %>
-  <%= f.input :name, :required => false %>
-  <%= f.input :date_of_birth, :as => :date, :start_year => Date.today.year - 90,
-                              :end_year => Date.today.year - 12, :discard_day => true,
-                              :order => [:month, :year] %>
-  <%= f.button :submit %>
-<% end %>
+
+<div class="w-50 container mt-5">
+
+    <%= form_with url: form_design_path, method: :post do %>
+
+<%# ATTENTION FORMAT DATE ET HEURE %>
+
+      <%= text_field_tag :name,
+            params[:name],
+            class: "form-control",
+            placeholder: "name"
+        %>
+
+      <%= text_field_tag :city,
+            params[:city],
+            class: "form-control",
+            placeholder: "city"
+        %>
+
+
+<p>Mettre une date sous ce format : AAAA-MM-DD par exemple 1993-07-24</p>
+
+      <%= text_field_tag :date,
+            params[:date],
+            class: "form-control",
+            placeholder: "date"
+        %>
+
+<p>Mettre une heure sous ce format : HH-MM par exemple 10-30 </p>
+
+      <%= text_field_tag :hour,
+            params[:hour],
+            class: "form-control",
+            placeholder: "hour"
+        %>
+
+
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+
+
+</div>
