@@ -5,3 +5,19 @@ right: 3.75%;
 top: 17.96%;
 bottom: 29.93%;
 }
+
+  .container-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+
+}
+
+.point_dinterrogation {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+}

@@ -1,36 +1,23 @@
-<div class="container">
+<div class="container-home">
   <%# debut point dinterrogation  %>
   <div class="point_dinterrogation">
     <%= link_to informations_path do%>
-    <p>informations</p>
-      <i class="fa-solid fa-question"></i>
+    <i class="fa-solid fa-question fa-fade fa-2xl" style="color: #74c55e;display: block;"></i>
     <% end %>
   </div>
   <%# fin point dinterrogation  %>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  <div>
     <div class="text-block">
       <h1 class="LUE">  Let Us Elevate </h1>
-      <p class="slogan"> les je sont faits et tout va bien</p>
+      <p class="slogan"> Les je sont faits... Et tout va bien !</p>
     </div>
 
+    <%# div class="link-to">
     <%# ici chevron pour switcher sur ecran inscription #%>
-    <div class="link-to">
+
       <%= link_to user_designs_path do%>
-      <p>faire son Design</p>
-      <i class="fa-solid fa-chevron-right"></i>
+      <a class="btn btn-gradient" href="#">Je découvre mon design humain </a>
       <% end %>
-    </div>
+  </div>
 </div>
