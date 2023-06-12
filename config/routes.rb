@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :user_designs
 
   get "design", to: "designs#form", as: :form_design
+  post "design", to: "designs#scrap"
 end

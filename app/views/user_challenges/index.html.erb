@@ -1,13 +1,10 @@
-<div class="container img">
-<h1>Bienvenu</h1>
-<h3> Voici les challenges que nous te recommandons d'après ton design humain !</h3>
-<% @userchallenges.each do |challenge| %>
-
-  <div class="trans-back m-2 challenge-content">
-<%= link_to challenge.challenge.title, user_challenge_path(challenge), class:"text-decoration-none" %>
-  </div>
-
-<% end %>
-
-
+<div class="container font-size-chall">
+    <div class="trans-back">
+      <h3> Voici les challenges que nous te recommandons d'après ton design humain !</h3>
+    </div>
+        <% @userchallenges.each do |challenge| %>
+      <div class="trans-back m-3 challenge-content p-2">
+        <%= link_to challenge.challenge.title, user_challenge_path(challenge), class:"text-decoration-none text-white f-size-index" %>
+      </div>
+        <% end %>
 </div>
