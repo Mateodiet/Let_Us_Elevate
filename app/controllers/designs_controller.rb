@@ -6,13 +6,12 @@ class DesignsController < ApplicationController
   end
 
   def scrap
-
     current_user.update(username: params[:name], city: params[:city])
 
 # if params date n'est pas présent, j'en met un par default pour pas faire planter l'url
 
 
-    url = "https://api.bodygraphchart.com/v221006/hd-data?api_key=#{ENV["API_KEY"]}&date=#{params[:date]}-10-10"
+    url = "https://api.bodygraphchart.com/v221006/hd-data?api_key=#{ENV["API_KEY"]}&date=#{params[:year]}-#{params[:month]}-#{params[:day]}-#{params[:hour]}-#{params[:minutes]}"
 # heure par default
     design = JSON.parse(URI.open("#{url}").read)
 
