@@ -46,7 +46,7 @@ challenge_7 = Challenge.create!(title: "Se clarifier", description: "Clarifier s
 
 p "#{Challenge.count} challenge created"
 
-UserChallenge.create!(challenge: challenge, user: victor,status: "en_cours")
+UserChallenge.create!(challenge: challenge, user: victor,status: "réussi")
 UserChallenge.create!(challenge: challenge_2, user: victor,status: "réussi")
 UserChallenge.create!(challenge: challenge_3, user: victor,status: "planifié")
 UserChallenge.create!(challenge: challenge_4, user: victor,status: "planifié")
