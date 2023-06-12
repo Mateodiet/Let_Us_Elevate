@@ -1,31 +1,29 @@
-// .information_1 {
-
-// }
-
-// .information_btn_1 {
-
-// }
-
-.information_btn_2 {
-  opacity: 0.5;
-  // &:hover {
-  //   opacity: 1;
-  // }
-}
-
-.information_btn_3 {
-  opacity: 0.5;
-  // &:hover {
-  //   opacity: 1;
-  // }
+.information_1{
+  font-size: white;
+  h2{
+    background-color: rgba(135, 135, 135, 0.5);
+  border-radius: 50px;
+  }
 }
 
 .information_2 {
-  display: none;
+  background-color: white rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  h2{
+  background-color: rgba(135, 135, 135, 0.5);
+  border-radius: 50px;
+  }
+
 }
 
 .information_3 {
-display: none;
+  background-color: white rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  h2{
+  background-color: rgba(135, 135, 135, 0.5);
+  border-radius: 50px;
+  }
+
 }
 
 
