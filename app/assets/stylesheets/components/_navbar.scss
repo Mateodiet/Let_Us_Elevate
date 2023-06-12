@@ -1,12 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  position:fixed;
+  bottom:0px;
+  width:1450px;
+  background: url(http://illiweb.com/fa/pbucket.gif) repeat-x ;
+  text-align: center;
+  font-size: 20px;
 }
