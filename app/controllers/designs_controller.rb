@@ -1,5 +1,32 @@
+require 'open-uri'
+require 'json'
+
 class DesignsController < ApplicationController
   def form
+  end
+
+  def scrap
+
+    current_user.update(username: params[:name], city: params[:city])
+
+# if params date n'est pas présent, j'en met un par default pour pas faire planter l'url
+
+
+    url = "https://api.bodygraphchart.com/v221006/hd-data?api_key=#{ENV["API_KEY"]}&date=#{params[:date]}-10-10"
+# heure par default
+    design = JSON.parse(URI.open("#{url}").read)
+
+    strategy = design["Properties"]["Strategy"]["id"]
+    type = design["Properties"]["Type"]["id"]
+    authority = design["Properties"]["InnerAuthority"]["id"]
+    notself = design["Properties"]["NotSelfTheme"]["id"]
+
+    design_from_api = Design.create(name_type: type, strategy: strategy, authority: authority, notself: notself )
+
+    user_design = UserDesign.new(design_id: design_from_api.id, user_id: current_user.id)
+    user_design.save
+
+    redirect_to user_design_path(user_design.id)
   end
 
   def new
