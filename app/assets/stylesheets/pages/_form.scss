@@ -21,20 +21,42 @@
 }
 
 .trans-cards {
-  background-color: #000;
-  opacity: 0.7;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
-  border-radius: 15px;
   width: auto;
-  margin-bottom: 25px;
-  margin-top: 30px;
-
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  opacity: 0.75;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+  color: black;
+  padding-bottom: 1px;
   h2 {
     text-align: center;
   }
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.space-form-1{
+  height: 35px;
 }
 
 .space-form{
-  margin-top: 60px;
+  height: 110px;
+}
+
+.round-input {
+  border-radius: 15px;
+}
+
+.btn-pale-blue{
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  background: #6C90A8;
+  border: 1px solid #6C90A8;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
 }
