@@ -1,5 +1,5 @@
 <div class="navbar-lewagon fixed-bottom">
-    <%= link_to user_designs_path, class: "navbar-brand" do %>
+    <%= link_to user_design_path(current_user.user_design), class: "navbar-brand" do %>
       <i class="fa-solid fa-moon"></i>
       <p>Mon design</p>
     <% end %>
