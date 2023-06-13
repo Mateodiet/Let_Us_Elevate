@@ -15,6 +15,8 @@ class DesignsController < ApplicationController
 # heure par default
     design = JSON.parse(URI.open("#{url}").read)
 
+# je vais chercher l'ID à chaque fois sur chaque hash (exemple: strategie, propriete, innerautority)(https://bodygraphchart.com/docs/)
+
     strategy = design["Properties"]["Strategy"]["id"]
     type = design["Properties"]["Type"]["id"]
     authority = design["Properties"]["InnerAuthority"]["id"]
