@@ -46,13 +46,13 @@ challenge_7 = Challenge.create!(title: "Se clarifier", description: "Clarifier s
 
 p "#{Challenge.count} challenge created"
 
-UserChallenge.create!(challenge: challenge, user: victor,status: "réussi")
-UserChallenge.create!(challenge: challenge_2, user: victor,status: "réussi")
-UserChallenge.create!(challenge: challenge_3, user: victor,status: "planifié")
-UserChallenge.create!(challenge: challenge_4, user: victor,status: "planifié")
-UserChallenge.create!(challenge: challenge_5, user: victor,status: "planifié")
-UserChallenge.create!(challenge: challenge_6, user: victor,status: "planifié")
-UserChallenge.create!(challenge: challenge_7, user: victor,status: "planifié")
+UserChallenge.create!(challenge: challenge, user: victor)
+UserChallenge.create!(challenge: challenge_2, user: victor)
+UserChallenge.create!(challenge: challenge_3, user: victor)
+UserChallenge.create!(challenge: challenge_4, user: victor)
+UserChallenge.create!(challenge: challenge_5, user: victor)
+UserChallenge.create!(challenge: challenge_6, user: victor)
+UserChallenge.create!(challenge: challenge_7, user: victor)
 
 p "#{UserChallenge.count} user challenge created"
 

@@ -12,6 +12,6 @@ class UserChallengesController < ApplicationController
     if params[:status].present? && UserChallenge::STATUSES.include?(params[:status].to_sym)
       @userchallenge.update(status: params[:status])
     end
-    redirect_to user_challenge_path(@userchallenge), notice: "Votre challenge est #{@userchallenge.status} !"
+    redirect_to user_challenge_path(@userchallenge)
   end
 end

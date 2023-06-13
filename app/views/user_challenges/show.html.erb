@@ -1,17 +1,41 @@
 <div class="container img">
   <div class="show-content-challenges">
-    <div class="trans-back m-4">
+    <div class="trans-back-blue">
       <h1 class="challenge-content">Challenge <%= @userchallenge.challenge.title %></h1>
     </div>
       <div class="trans-back">
         <p><%= @userchallenge.challenge.description %></p>
 
 
-
-          <% if @userchallenge.status == "réussi" %>
-            <p class="valid">Bravo ! Place à la suite !</p>
-          <% else %>
-            <%= link_to "Valider", change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch}, class:"text-decoration-none text-white button-64" %>
+          <% if @userchallenge.status == nil %>
+              <%= link_to change_status_user_challenge_path(@userchallenge, status: "nul"), data: { turbo_method: :patch} do %>
+              <i class="fa-light fa-face-tired" style="color: #cc3838;"></i>
+              <% end %>
+              <%= link_to change_status_user_challenge_path(@userchallenge, status: "moyen"), data: { turbo_method: :patch} do %>
+              <i class="fa-regular fa-face-meh" style="color: #e19a37;"></i>
+              <% end %>
+              <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
+              <i class="fa-regular fa-face-grin-stars" style="color: #47a824;"></i>
+              <% end %>
+          <% elsif @userchallenge.status == "nul" %>
+              <i class="fa-light fa-face-tired" style="color: #cc3838;"></i>
+                    <%= link_to change_status_user_challenge_path(@userchallenge, status: "moyen"), data: { turbo_method: :patch} do %>
+                    <i class="fa-regular fa-face-meh" style="color: #e19a37;"></i>
+                    <% end %>
+                    <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
+                    <i class="fa-regular fa-face-grin-stars" style="color: #47a824;"></i>
+                    <% end %>
+          <% elsif @userchallenge.status == "moyen" %>
+              <i class="fa-regular fa-face-meh" style="color: #e19a37;"></i>
+                    <%= link_to change_status_user_challenge_path(@userchallenge, status: "nul"), data: { turbo_method: :patch} do %>
+                    <i class="fa-light fa-face-tired" style="color: #cc3838;"></i>
+                    <% end %>
+                    <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
+                    <i class="fa-regular fa-face-grin-stars" style="color: #47a824;"></i>
+                    <% end %>
+          <% elsif @userchallenge.status == "réussi" %>
+              <i class="fa-regular fa-face-grin-stars" style="color: #47a824;"></i>
+              <p class="valid">Bravo ! Place à la suite !</p>
           <% end %>
 
             <div class="mt-4 mb-2">
