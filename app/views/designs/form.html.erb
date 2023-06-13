@@ -1,15 +1,17 @@
-<div class="container mt-5">
+<div class="container">
+  <div class="space-form-1"></div>
+    <h2 class="text-center text-white">Let Us Elevate</h2>
   <div class="space-form"></div>
   <div class="trans-cards px-2">
 
-    <h2>Crée ton Design Humain</h2>
+    <h2 class="pt-2">Crée ton Design Humain</h2>
     <%= form_with url: form_design_path, method: :post do %>
 <%# ATTENTION FORMAT DATE ET HEURE %>
-      <div class="trans-cards form-name">
+      <div class="form-name mb-2">
       <p>Nom</p>
         <%= text_field_tag :name,
               params[:name],
-              class: "form-control text-center fw-bold w-100% rounded",
+              class: "form-control text-center fw-bold w-100% round-input",
               placeholder: "Jane Doe"
           %>
       </div>
@@ -19,7 +21,7 @@
                   <p>Jour</p>
                   <%= text_field_tag :day,
                         params[:day],
-                        class: "form-control text-center fw-bold rounded",
+                        class: "form-control text-center fw-bold round-input",
                         placeholder: "08"
                     %>
                 </div>
@@ -27,7 +29,7 @@
                 <p>Mois</p>
                   <%= text_field_tag :month,
                         params[:month],
-                        class: "form-control text-center fw-bold rounded",
+                        class: "form-control text-center fw-bold round-input",
                         placeholder: "06"
                     %>
                 </div>
@@ -35,7 +37,7 @@
                 <p>Année</p>
                   <%= text_field_tag :year,
                         params[:year],
-                        class: "form-control text-center fw-bold rounded",
+                        class: "form-control text-center fw-bold round-input",
                         placeholder: "1980"
                     %>
                 </div>
@@ -45,7 +47,7 @@
               <p>Heure</p>
                 <%= text_field_tag :hour,
                       params[:hour],
-                      class: "form-control text-center fw-bold rounded",
+                      class: "form-control text-center fw-bold round-input",
                       placeholder: "08"
                   %>
               </div>
@@ -53,7 +55,7 @@
               <p>Minutes</p>
                 <%= text_field_tag :minutes,
                       params[:minutes],
-                      class: "form-control text-center fw-bold rounded",
+                      class: "form-control text-center fw-bold round-input",
                       placeholder: "15"
                   %>
               </div>
@@ -62,11 +64,11 @@
             <p>Lieu de naissance</p>
                     <%= text_field_tag :city,
                         params[:city],
-                        class: "form-control text-center fw-bold rounded",
+                        class: "form-control text-center fw-bold round-input",
                         placeholder: "Paris"
                     %>
             </div>
-        <%= submit_tag "Générer mon Design Humain !", name: "", class: "btn btn-primary mt-4 text-center w-100 mb-2 rounded" %>
+        <%= submit_tag "Générer mon Design Humain !", name: "", class: "btn-pale-blue mt-4 text-center w-100 mb-3" %>
               <% end %>
 
   </div>
