@@ -31,9 +31,9 @@ width: 252 px;
 }
 
 .LUE {
-  color: moccasin;
+  color: white;
   font-weight: bold;
-  font-size: xx-large;
+  font-size:larger;
   text-align: center;
   display: flex;
   margin-top: 0px;
@@ -43,8 +43,8 @@ width: 252 px;
 
 
 .slogan {
-  color: moccasin;
-  font-size: large;
+  color: white;
+  font-size:medium;
   font-weight: lighter;
   opacity: 3.3;
   margin-top: 5px;
@@ -62,17 +62,16 @@ width: 252 px;
 }
 
 .btn-gradient {
-  color: cornsilk;
-  padding: 13px 33px;
+  color: white;
+  padding: 10px 20px;
   border-radius: 26px;
-  font-weight: bold;
-  background: linear-gradient(#EA906C, #0F60C4);
-  border: 1px solid #0F60C4;
+  background: #6C90A8;
+  border: 1px solid #6C90A8;
   text-align: center;
   justify-content: space-around;
   align-items: center;
   display: flex;
-  filter: drop-shadow(0 -1mm 4mm rgb(160, 0, 210));
+
 }
 
 .container {
