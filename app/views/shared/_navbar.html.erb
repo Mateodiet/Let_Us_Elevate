@@ -1,7 +1,9 @@
 <div class="navbar-lewagon fixed-bottom">
-    <%= link_to user_design_path(current_user.user_design), class: "navbar-brand" do %>
-      <i class="fa-solid fa-moon"></i>
-      <p>Mon design</p>
+    <% if current_user %>
+      <%= link_to user_design_path(current_user.user_design), class: "navbar-brand" do %>
+        <i class="fa-solid fa-moon"></i>
+        <p>Mon design</p>
+      <% end %>
     <% end %>
 
     <%= link_to user_challenges_path, class: "navbar-brand" do%>
