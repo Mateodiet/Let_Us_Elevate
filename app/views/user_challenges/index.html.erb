@@ -1,10 +1,11 @@
 <div class="container font-size-chall">
-    <div class="trans-back">
+    <div class="space-index"></div>
+    <div class="trans-back-blue">
       <h3> Voici les challenges que nous te recommandons d'après ton design humain !</h3>
     </div>
         <% @userchallenges.each do |challenge| %>
       <div class="trans-back m-3 challenge-content p-2">
-        <%= link_to challenge.challenge.title, user_challenge_path(challenge), class:"text-decoration-none text-white f-size-index" %>
+        <%= link_to challenge.challenge.title, user_challenge_path(challenge), class:"text-decoration-none text-black f-size-index" %>
       </div>
         <% end %>
 </div>
