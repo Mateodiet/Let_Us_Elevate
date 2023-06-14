@@ -1,7 +1,10 @@
 <div class="container">
   <h1> Votre Design Humain </h1>
 
-  <%= image_tag "https://imagizer.imageshack.com/img924/8678/xdEd92.png", class:"image-design" %>
+  <div class="image-design">
+    <p><%= current_user.username ? current_user.username : "Votre Design" %></p>
+    <%= image_tag "https://imagizer.imageshack.com/img924/6677/YtUAGl.png", class:"image-design" %>
+  </div>
 
   <div class="trans-back-vic">
     <p> <strong> Type: </strong>  <%= @user_design.design.name_type %>  </p>
@@ -9,5 +12,4 @@
     <p> <strong> Autorité: </strong> <%= @user_design.design.authority %>  </p>
     <p> <strong> Thème du Non Soi : </strong>  <%= @user_design.design.notself %> </p>
   </div>
-
 </div>
