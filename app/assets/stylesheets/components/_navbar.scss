@@ -1,13 +1,16 @@
 .navbar-lewagon {
   background-color: #6C90A8;
   opacity: 0.75;
-  border-radius: 50px;
-  margin: 10px 20px;
+  // border-radius: 50px;
+  // margin: 10px 20px;
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
-
+  position: fixed;
+  bottom: 0;
+  width: 390px;
 }
+
 
 .navbar-brand {
   font-size: 30px;
@@ -18,8 +21,6 @@
     margin: 0;
   }
 }
-
-
 
 .background-nav{
   background-color: #6C90A8;
@@ -34,12 +35,13 @@
 .navbar-lewagon-top {
 
   // height: 10vh; <=== dropdown cassé avec
+  opacity: 0.75;
   height: auto;
   justify-content: space-between;
   background: #6C90A8;
   color:white;
-  border-bottom-right-radius: 16px;
-  border-bottom-left-radius: 16px;
+  // border-bottom-right-radius: 16px;
+  // border-bottom-left-radius: 16px;
 }
 
 .navbar-lewagon-top .navbar-collapse {

@@ -1,22 +1,13 @@
 <div class="container">
+  <h1> Votre Design Humain </h1>
 
-<h1 class="let us elevate"> Let Us Elevate </h1>
+  <%= image_tag "https://imagizer.imageshack.com/img924/8678/xdEd92.png", class:"image-design" %>
 
-
-  <div class="text-block">
-
-
-    </div>
-
-    <%= image_tag "https://imagizer.imageshack.com/img924/8678/xdEd92.png", class:"image-design" %>
-
-    <div class="trans-back-vic">
-
-      <div> <p> <strong> Type: </strong>  <%= @user_design.design.name_type %>  </p> </div>
-      <div> <p> <strong> Stratégie: </strong>  <%= @user_design.design.strategy %> </p> </div>
-      <div> <p> <strong> Autorité: </strong> <%= @user_design.design.authority %>  </p> </div>
-      <div> <p> <strong> Thème du Non Soi : </strong>  <%= @user_design.design.notself %> </p> </div>
-      </div>
+  <div class="trans-back-vic">
+    <p> <strong> Type: </strong>  <%= @user_design.design.name_type %>  </p>
+    <p> <strong> Stratégie: </strong>  <%= @user_design.design.strategy %> </p>
+    <p> <strong> Autorité: </strong> <%= @user_design.design.authority %>  </p>
+    <p> <strong> Thème du Non Soi : </strong>  <%= @user_design.design.notself %> </p>
   </div>
 
 </div>

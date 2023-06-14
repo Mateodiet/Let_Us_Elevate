@@ -10,12 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="container-full-page">
-    <div class="backgroundimage">
+  <body>
+    <div class="background">
       <%= render "shared/navbar_top" %>
-
       <%= yield %>
-
       <%= render "shared/navbar" %>
     </div>
   </body>
