@@ -2,7 +2,8 @@
   <div class="space"></div>
   <div class="show-content-challenges">
     <div class="trans-back-blue">
-      <h1 class="challenge-content">Challenge <%= @userchallenge.challenge.title %></h1>
+      <h1 class="challenge-content">Challenge</h1>
+       <h2><%= @userchallenge.challenge.title %></h2>
     </div>
       <div class="trans-back chal-desc">
         <p><%= @userchallenge.challenge.description %></p>
@@ -47,7 +48,7 @@
           <% end %>
 
             <div class="mt-4 mb-2">
-              <%= link_to "Tous mes challenges", user_challenges_path, class:"center-btn text-decoration-none text-white btn btn-gradient" %>
+              <%= link_to "Tous mes challenges", user_challenges_path, class:"center-btn text-decoration-none btn-pale-blue" %>
             </div>
       </div>
   </div>
