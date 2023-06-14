@@ -40,6 +40,10 @@ class DesignsController < ApplicationController
     redirect_to user_designs_path(@design)
   end
 
+  def show
+    @design = Design.find(params[:id])
+  end
+
   private
 
   def design_params
