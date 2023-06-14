@@ -12,4 +12,9 @@ Rails.application.routes.draw do
 
   get "design", to: "designs#form", as: :form_design
   post "design", to: "designs#scrap"
+
+  get "try_design", to: "new_designs#form_without_design"
+  post "try_design_post", to: "new_designs#new_design", as: :try_design_post
+  get "design/:id", to: "designs#show", as: :design_show
+
 end
