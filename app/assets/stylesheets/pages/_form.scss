@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.form-center {
+  margin-top: 8vh;
+}
+
 .trans-cards {
   width: auto;
   background-color: #D9D9D9;
@@ -70,4 +74,9 @@
   justify-content: space-around;
   align-items: center;
   display: flex;
+}
+
+.form-control::placeholder {
+  opacity: 0.75;
+  color: rgb(122, 122, 122);
 }

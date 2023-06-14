@@ -1,10 +1,7 @@
 <div class="container">
-  <div class="space-form-1"></div>
-    <h2 class="text-center text-white">Let Us Elevate</h2>
-  <div class="space-form"></div>
-  <div class="trans-cards px-2">
+  <div class="form-center trans-cards px-2">
 
-    <h2 class="pt-2">Crée ton Design Humain</h2>
+    <h2 class="p-3">Faites le Design Humain de vos amis !</h2>
     <%= form_with url: try_design_post_path, method: :post do %>
 <%# ATTENTION FORMAT DATE ET HEURE %>
       <div class="form-name mb-2">
@@ -68,7 +65,7 @@
                         placeholder: "Paris"
                     %>
             </div>
-        <%= submit_tag "Générer mon Design Humain !", name: "", class: "btn-pale-blue mt-4 text-center w-100 mb-3" %>
+        <%= submit_tag "Générer un Design Humain !", name: "", class: "btn-pale-blue mt-4 text-center w-100 mb-3" %>
               <% end %>
 
   </div>
