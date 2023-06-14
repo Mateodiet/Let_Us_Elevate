@@ -1,23 +1,12 @@
-<%# vue pour la page feature decouverte %>
-
 <div class="container">
-
-<h1 class="let us elevate"> Let Us Elevate </h1>
-
-
-  <div class="text-block">
-
-
-    </div>
-
-
+  <div class="user-design m-2">
     <%= image_tag "https://imagizer.imageshack.com/img924/6677/YtUAGl.png", class:"image-design" %>
 
-    <div class="trans-back-vic">
-
-      <div> <p> <strong> Type: </strong>  <%= @design.name_type %>  </p> </div>
-      <div> <p> <strong> Stratégie: </strong>  <%= @design.strategy %> </p> </div>
-      <div> <p> <strong> Autorité: </strong> <%= @design.authority %>  </p> </div>
-      <div> <p> <strong> Thème du Non Soi : </strong>  <%= @design.notself %> </p> </div>
-    </div>
+      <div class="trans-back align-each">
+        <p> <strong> Type: </strong>  <%= @design.name_type %>  </p>
+        <p> <strong> Stratégie: </strong>  <%= @design.strategy %> </p>
+        <p> <strong> Autorité: </strong> <%= @design.authority %>  </p>
+        <p> <strong> Thème du Non Soi : </strong>  <%= @design.notself %> </p>
+      </div>
   </div>
+</div>
