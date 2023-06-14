@@ -3,6 +3,28 @@
   max-height:100%;
 }
 
+.emote-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: x-large;
+}
+
+.center-btn {
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+}
+
+.space {
+  height: 24px;
+}
+
+.chal-desc{
+  margin-bottom: 80px;
+  margin-top: 16px;
+}
+
 .trans-back-blue {
   background-color: #6C90A8;
   border-radius: 30px;
