@@ -1,6 +1,13 @@
 <div class="navbar-lewagon fixed-bottom">
     <% if current_user %>
-      <%= link_to user_design_path(current_user.user_design), class: "navbar-brand" do %>
+      <%# Si le user a deja un design on le redirige dessus %>
+      <% if current_user.user_design %>
+        <%= link_to user_design_path(current_user.user_design), class: "navbar-brand" do %>
+      <% else %>
+        <%# sinon on redirige vers le formulaire %>
+        <%= link_to design_form_path, class: "navbar-brand" do %>
+      <% end %>
+
         <i class="fa-solid fa-moon"></i>
         <p>Mon design</p>
       <% end %>
