@@ -6,12 +6,11 @@
 
     <%= image_tag "https://imagizer.imageshack.com/img924/6677/YtUAGl.png", class:"image-design" %>
   </div>
-  <i class="fa-solid fa-circle-play btn-lecture" data-action="click->audios#play"></i>
 
-  <div class="trans-back-vic">
-    <p> <strong> Type: </strong>  <%= @design.name_type %>  </p>
-    <p> <strong> Stratégie: </strong>  <%= @design.strategy %> </p>
-    <p> <strong> Autorité: </strong> <%= @design.authority %>  </p>
-    <p> <strong> Thème du Non Soi : </strong>  <%= @design.notself %> </p>
-  </div>
+    <div class="info-for-design">
+      <div class="audio-centered"><i class="fa-solid fa-circle-play btn-lecture" data-action="click->audios#play"></i><p> <strong> Type: </strong>  <%= @design.name_type %>  </p></div>
+      <div class="audio-centered"><i class="fa-solid fa-circle-play btn-lecture" data-action="click->audios#play"></i><p> <strong> Stratégie: </strong>  <%= @design.strategy %> </p></div>
+      <div class="audio-centered"><i class="fa-solid fa-circle-play btn-lecture" data-action="click->audios#play"></i><p> <strong> Autorité: </strong> <%= @design.authority %>  </p></div>
+      <div class="audio-centered"><i class="fa-solid fa-circle-play btn-lecture" data-action="click->audios#play"></i><p> <strong> Thème du Non Soi : </strong>  <%= @design.notself %> </p></div>
+    </div>
 </div>
