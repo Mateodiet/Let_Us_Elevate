@@ -1,10 +1,9 @@
 <div class="container font-size-chall">
-    <div class="space"></div>
-    <div class="trans-back-blue">
-      <h3> Voici les challenges que nous te recommandons d'après ton design humain !</h3>
+    <div class="text-white m-2 pb-4">
+      <h3> Tes challenges de Manifestor ✨ </h3>
     </div>
         <% @userchallenges.each do |challenge| %>
-      <div class="trans-back m-3 challenge-content p-2">
+      <div class="trans-back m-3 challenge-content p-2 font-family: inherit;">
         <%= link_to challenge.challenge.title, user_challenge_path(challenge), class:"text-decoration-none text-black f-size-index" %>
       </div>
         <% end %>
