@@ -14,17 +14,13 @@
 
           <li class="nav-item dropdown text-center">
             <%= image_tag "https://static.thenounproject.com/png/4035892-200.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu background-nav dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <div>
               <%#= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
 
-              <li class="nav-item text-center">
-            <%= link_to informations_path, class: "nav-link"  do %>
-              <i class="fa-solid fa-circle-info hw" style="color: #000000;"></i>
-            <% end%>
-          </li>
+
 
         <% else %>
           <li class="nav-item">
