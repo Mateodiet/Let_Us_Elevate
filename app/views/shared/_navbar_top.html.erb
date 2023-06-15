@@ -14,7 +14,7 @@
 
           <li class="nav-item dropdown text-center">
             <%= image_tag "https://static.thenounproject.com/png/4035892-200.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div>
+            <div class="dropdown-menu background-nav dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%#= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
