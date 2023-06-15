@@ -18,16 +18,14 @@
   font-size: 30px;
   text-align: center;
   color: white;
-  text-shadow: rgba(104, 102, 102, 0.8) 0px 0px 20px;
-
   p{
+    text-shadow: rgb(104 102 102) 0px 0px 20px;
     font-size: 10px;
     margin: 0;
   }
 }
 
-
-.background-nav{
+.info-home{
   background-color: $degrade;
 }
 
