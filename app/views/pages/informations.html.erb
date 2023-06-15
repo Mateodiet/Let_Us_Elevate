@@ -1,16 +1,16 @@
 <div class="container infos">
-  <div class="apropos">
+  <div class="apropos" data-controller="informations">
 
 
 
 
     <h1 class="text-center mb-4">Informations</h1>
-    <div class="infos-1 white-back p-2">
+    <div class="info_1 white-back p-2" data-informations-target="info_1">
       <h2 class="text-center">Qu’est-ce que le Design Humain ?</h2>
       <p>Le design humain est un outil de connaissance de soi. Il permet de découvrir son plan de fonctionnement énergétique unique au niveau individuel</p>
     </div>
 
-    <div class="infos-2 white-back p-2 mt-4">
+    <div class="info_2 d-none white-back p-2 mt-4" data-informations-target="info_2">
       <h2 class="text-center">Outil de connaissance inédit</h2>
       <p>Pluridisciplinaire dans sa structure, le design humain se base sur :</p>
       <ul>
@@ -20,5 +20,18 @@
         <li>La physique quantique et génétique</li>
       </ul>
     </div>
+
+
+    <div class="btns-info">
+    <i data-action="click->informations#first" data-informations-target="btn_1" class="fa-solid fa-circle info-active"></i>
+    <i data-action="click->informations#second" data-informations-target="btn_2" class="fa-solid fa-circle"></i>
+    </div>
+
   </div>
+
+
+
+
+
+
 </div>
