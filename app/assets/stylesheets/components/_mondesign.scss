@@ -66,5 +66,7 @@ display: flex;
     left: 30%;
     z-index: 5;
     padding: 4px 12px;
+    min-width: 110px;
+    justify-content: center;
   }
 }
