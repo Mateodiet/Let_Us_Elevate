@@ -14,33 +14,33 @@
             <p>Vous n'avez pas encore tenté ce challenge, il est l'heure !</p>
               <div class="emote-btn">
                 <%= link_to change_status_user_challenge_path(@userchallenge, status: "nul"), data: { turbo_method: :patch} do %>
-                  <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                  <i class="fa-solid fa-circle-xmark" style="color: #000000;"></i>
                 <% end %>
                 <%= link_to change_status_user_challenge_path(@userchallenge, status: "moyen"), data: { turbo_method: :patch} do %>
-                  <i class="fa-solid fa-equals" style="color: #000000;"></i>
+                  <i class="fa-solid fa-circle-half-stroke" style="color: #000000;"></i>
                 <% end %>
                 <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
-                  <i class="fa-solid fa-check" style="color: #000000;"></i>
+                  <i class="fa-solid fa-circle-check" style="color: #000000;"></i>
                 <% end %>
               </div>
           <% elsif @userchallenge.status == "nul" %>
                 <p>La dernière fois, vous ne vous sentiez pas en accord avec vous même ! Retentez l'expérience</p>
                   <div class="emote-btn">
                     <%= link_to change_status_user_challenge_path(@userchallenge, status: "moyen"), data: { turbo_method: :patch} do %>
-                      <i class="fa-solid fa-equals" style="color: #000000;"></i>
+                      <i class="fa-solid fa-circle-half-stroke" style="color: #000000;"></i>
                     <% end %>
                     <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
-                      <i class="fa-solid fa-check" style="color: #000000;"></i>
+                      <i class="fa-solid fa-circle-check" style="color: #000000;"></i>
                     <% end %>
                   </div>
           <% elsif @userchallenge.status == "moyen" %>
                 <p>La dernière fois, vous vous sentiez mitigé, retentez l'expérience !</p>
                   <div class="emote-btn">
                     <%= link_to change_status_user_challenge_path(@userchallenge, status: "nul"), data: { turbo_method: :patch} do %>
-                      <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                      <i class="fa-solid fa-circle-xmark" style="color: #000000;"></i>
                     <% end %>
                     <%= link_to change_status_user_challenge_path(@userchallenge, status: "réussi"), data: { turbo_method: :patch} do %>
-                      <i class="fa-solid fa-check" style="color: #000000;"></i>
+                      <i class="fa-solid fa-circle-check" style="color: #000000;"></i>
                     <% end %>
                   </div>
           <% elsif @userchallenge.status == "réussi" %>
