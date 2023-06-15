@@ -80,3 +80,24 @@
   opacity: 0.75;
   color: rgb(122, 122, 122);
 }
+
+.btn-purple {
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  background: $degrade;
+  border: 1px solid $degrade;
+  display: block;
+  width: fit-content;
+
+}
+
+.btn-pale-blue:hover{
+  border-radius: 30px;
+  color: $degrade;
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid $degrade;
+  display: block;
+  width: fit-content;
+}
