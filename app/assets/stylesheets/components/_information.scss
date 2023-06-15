@@ -37,8 +37,6 @@
 
 
 
-
-
 .information_1{
   h2{
     color: moccasin;
@@ -100,5 +98,25 @@
 .apropos{
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: relative;
 
+}
+
+.btns-info {
+  position: fixed;
+  bottom: 30vh;
+  left: 46vw;
+  color: rgba(211, 211, 211, 0.616);
+
+  i {
+    font-size: 24px;
+  }
+
+  .info-active {
+    color: whitesmoke;
+    }
+
+    .fa-solid {
+      margin: 0 8px;
+    }
 }
