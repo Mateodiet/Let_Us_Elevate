@@ -39,6 +39,28 @@
   margin-bottom: 32px;
 }
 
+.audio-centered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+  p {
+    padding-left: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.info-for-design {
+  color: white;
+  display: flex;
+  flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
+  align-items: flex-start;
+  margin-top: 24px;
+  margin-left: 4rem;
+}
 
 
 .trans-back-blue h2 {
