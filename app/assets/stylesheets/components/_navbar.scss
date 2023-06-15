@@ -1,6 +1,8 @@
 .navbar-lewagon {
-  background: linear-gradient(#6C90A8, #0e274b);
-  opacity: 0.75;
+  // background: linear-gradient(to bottom right,#40128B, #c2a4f3);
+  background: $degrade;
+  // opacity: 0.75;
+
   // border-radius: 50px;
   // margin: 10px 20px;
   padding: 10px 0;
@@ -8,7 +10,7 @@
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  width: 390px;
+  width: 100%;
 }
 
 
@@ -38,8 +40,10 @@
   opacity: 0.75;
   height: auto;
   justify-content: space-between;
-  background: linear-gradient(#0e274b, #6C90A8);
-  color: white;
+
+  background: $degrade;
+  color:white;
+
   // border-bottom-right-radius: 16px;
   // border-bottom-left-radius: 16px;
 }

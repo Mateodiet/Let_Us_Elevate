@@ -1,7 +1,10 @@
 .background {
   background-image: url("https://images.unsplash.com/photo-1546825094-66e983c4c7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
   min-height: 100vh;
-  max-width: 390px;
   margin: 0 auto;
   position: relative;
+}
+
+.boxshadow {
+  box-shadow: rgba(255,255,255,0.5) 0px 0px 50px;
 }
